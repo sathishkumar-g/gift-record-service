@@ -16,7 +16,7 @@ public class GiftRecordService {
 	@Cacheable(value="giftRecordsCache")
 	public GiftRecord getGiftRecord() {
 		GiftRecord giftRecord = null;
-		giftRecord = restTemplate.getForObject("http://get-gift-record-service/get/", GiftRecord.class);
+		giftRecord = restTemplate.getForObject("https://get-gift-record-service.herokuapp.com/get", GiftRecord.class);
 		return giftRecord;
 	}
 
