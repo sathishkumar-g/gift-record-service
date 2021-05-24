@@ -22,7 +22,7 @@ public class GiftRecordServiceApplication {
 	@Bean
 	@LoadBalanced
 	public RestTemplate getRestTemplate(RestTemplateBuilder restTemplateBuilder) {
-		return restTemplateBuilder.setReadTimeout(Duration.ofSeconds(10)).build();
+		return restTemplateBuilder.setReadTimeout(Duration.ofSeconds(1200)).build();
 	}
 
 }
