@@ -18,7 +18,7 @@ public class GiftRecordServiceApplication {
 		SpringApplication.run(GiftRecordServiceApplication.class, args);
 	}
 	@Bean
-	@LoadBalanced
+	//@LoadBalanced
 	public RestTemplate getRestTemplate(RestTemplateBuilder restTemplateBuilder) {
 		return restTemplateBuilder.setReadTimeout(Duration.ofSeconds(30)).build();
 	}
