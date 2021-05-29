@@ -28,19 +28,23 @@ public class GiftRecordService {
 		// return
 		// restTemplate.getForObject("https://get-gift-record-service.herokuapp.com/gift/edit",
 		// GiftRecordItem.class);
-		return restTemplate.postForObject("http://localhost:8092/gift/edit", giftRecordItem, GiftRecordItem.class);
+		return restTemplate.postForObject("https://get-gift-record-service.herokuapp.com/gift/edit", giftRecordItem,
+				GiftRecordItem.class);
 	}
 
 	public void deleteGiftRecord(GiftRecordItem giftRecordItem) {
-		restTemplate.postForObject("http://localhost:8092/gift/delete", giftRecordItem, GiftRecordItem.class);
+		restTemplate.postForObject("https://get-gift-record-service.herokuapp.com/gift/delete", giftRecordItem,
+				GiftRecordItem.class);
 	}
 
 	public void deleteGiftRecords(GiftRecord giftRecord) {
-		restTemplate.postForObject("http://localhost:8092/gift/selectiveDelete", giftRecord, GiftRecordItem.class);
+		restTemplate.postForObject("https://get-gift-record-service.herokuapp.com/gift/selectiveDelete", giftRecord,
+				GiftRecordItem.class);
 	}
-	
+
 	public GiftRecordItem addGiftRecord(GiftRecordItem giftRecordItem) {
-		return restTemplate.postForObject("http://localhost:8092/gift/add", giftRecordItem, GiftRecordItem.class);
+		return restTemplate.postForObject("https://get-gift-record-service.herokuapp.com/gift/add", giftRecordItem,
+				GiftRecordItem.class);
 	}
 
 }
