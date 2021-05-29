@@ -20,7 +20,7 @@ public class UserService {
 		 * userDetails, UserDetails.class);
 		 */
 
-		userDetails = restTemplate.postForObject("http://localhost:8092/user/authenticate",
+		userDetails = restTemplate.postForObject("https://get-gift-record-service.herokuapp.com/user/authenticate",
 				userDetails, UserDetails.class);
 		return userDetails;
 	}
