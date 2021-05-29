@@ -11,8 +11,8 @@
 		<value-type>com.sugysri.birthday.giftrecordservice.models.GiftRecord
 		</value-type>
 		<expiry>
-			<!-- <ttl unit="seconds">1500</ttl> -->
-			<none />
+			<ttl unit="seconds">600</ttl>
+			<!-- <none /> -->
 		</expiry>
 
 		<!-- <listeners> <listener> <class>com.baeldung.cachetest.config.CacheEventLogger</class> 
@@ -27,7 +27,7 @@
 	</cache>
 
 	<cache alias="userDetailsCache">
-		<value-type>com.sugysri.birthday.giftrecordservice.models.GiftRecord
+		<value-type>com.sugysri.birthday.giftrecordservice.models.UserDetails
 		</value-type>
 		<expiry>
 			<none />

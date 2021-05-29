@@ -14,7 +14,13 @@ public class UserService {
 
 	@Cacheable(value = "userDetailsCache")
 	public UserDetails getUserRecord(UserDetails userDetails) {
-		userDetails = restTemplate.postForObject("https://get-gift-record-service.herokuapp.com/user/authenticate",
+		/*
+		 * userDetails = restTemplate.postForObject(
+		 * "https://get-gift-record-service.herokuapp.com/user/authenticate",
+		 * userDetails, UserDetails.class);
+		 */
+
+		userDetails = restTemplate.postForObject("http://localhost:8092/user/authenticate",
 				userDetails, UserDetails.class);
 		return userDetails;
 	}

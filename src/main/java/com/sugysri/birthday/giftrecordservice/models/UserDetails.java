@@ -1,7 +1,13 @@
 package com.sugysri.birthday.giftrecordservice.models;
 
-public class UserDetails {
+import java.io.Serializable;
 
+public class UserDetails implements Serializable{
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private int id;
 	private String userName;
 	private String password;
