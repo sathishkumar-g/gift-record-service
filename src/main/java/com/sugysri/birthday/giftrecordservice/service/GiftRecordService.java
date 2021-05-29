@@ -20,7 +20,7 @@ public class GiftRecordService {
 		// giftRecord =
 		// restTemplate.getForObject("https://get-gift-record-service.herokuapp.com/gift/get",
 		// GiftRecord.class);
-		giftRecord = restTemplate.getForObject("http://localhost:8092/gift/get", GiftRecord.class);
+		giftRecord = restTemplate.getForObject("https://get-gift-record-service.herokuapp.com/gift/get", GiftRecord.class);
 		return giftRecord;
 	}
 
