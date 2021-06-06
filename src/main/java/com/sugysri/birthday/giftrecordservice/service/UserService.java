@@ -31,14 +31,14 @@ public class UserService implements UserDetailsService {
 
 	public UserDTO addUserRecord(UserDTO user) {
 		user.setPassword(bcryptEncoder.encode(user.getPassword()));
-		return restTemplate.postForObject(serviceConstants.registerUrl, user, UserDTO.class);
+		return restTemplate.postForObject(serviceConstants.getRegisterUrl(), user, UserDTO.class);
 	}
 
 	@Override
 	public UserDetails loadUserByUsername(String userName) throws UsernameNotFoundException {
 
 		UserDTO user = null;
-		user = restTemplate.postForObject(serviceConstants.authUrl, userName, UserDTO.class);
+		user = restTemplate.postForObject(serviceConstants.getAuthUrl(), userName, UserDTO.class);
 		if (user == null) {
 			throw new UsernameNotFoundException("User not found with username: " + userName);
 		}

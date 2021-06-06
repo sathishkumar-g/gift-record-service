@@ -1,7 +1,6 @@
 package com.sugysri.birthday.giftrecordservice.config;
 
 import java.io.IOException;
-import java.util.Iterator;
 
 import javax.servlet.FilterChain;
 import javax.servlet.ServletException;

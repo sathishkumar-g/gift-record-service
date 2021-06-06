@@ -24,7 +24,7 @@ public class GiftRecordService {
 		// giftRecord =
 		// restTemplate.getForObject("https://get-gift-record-service.herokuapp.com/gift/get",
 		// GiftRecord.class);
-		giftRecord = restTemplate.getForObject(serviceConstants.getUrl, GiftRecord.class);
+		giftRecord = restTemplate.getForObject(serviceConstants.getGetUrl(), GiftRecord.class);
 		return giftRecord;
 	}
 
@@ -32,19 +32,19 @@ public class GiftRecordService {
 		// return
 		// restTemplate.getForObject("https://get-gift-record-service.herokuapp.com/gift/edit",
 		// GiftRecordItem.class);
-		return restTemplate.postForObject(serviceConstants.updateUrl, giftRecordItem, GiftRecordItem.class);
+		return restTemplate.postForObject(serviceConstants.getUpdateUrl(), giftRecordItem, GiftRecordItem.class);
 	}
 
 	public void deleteGiftRecord(GiftRecordItem giftRecordItem) {
-		restTemplate.postForObject(serviceConstants.deleteUrl, giftRecordItem, GiftRecordItem.class);
+		restTemplate.postForObject(serviceConstants.getDeleteUrl(), giftRecordItem, GiftRecordItem.class);
 	}
 
 	public void deleteGiftRecords(GiftRecord giftRecord) {
-		restTemplate.postForObject(serviceConstants.deleteMultipleUrl, giftRecord, GiftRecordItem.class);
+		restTemplate.postForObject(serviceConstants.getDeleteMultipleUrl(), giftRecord, GiftRecordItem.class);
 	}
 
 	public GiftRecordItem addGiftRecord(GiftRecordItem giftRecordItem) {
-		return restTemplate.postForObject(serviceConstants.addUrl, giftRecordItem, GiftRecordItem.class);
+		return restTemplate.postForObject(serviceConstants.getAddUrl(), giftRecordItem, GiftRecordItem.class);
 	}
 
 }
