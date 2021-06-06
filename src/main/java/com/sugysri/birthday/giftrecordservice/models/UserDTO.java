@@ -2,30 +2,15 @@ package com.sugysri.birthday.giftrecordservice.models;
 
 import java.io.Serializable;
 
-public class UserDetails implements Serializable{
+public class UserDTO implements Serializable{
 
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-	private int id;
 	private String userName;
 	private String password;
 	private String role;
-
-	/**
-	 * @return the id
-	 */
-	public int getId() {
-		return id;
-	}
-
-	/**
-	 * @param id the id to set
-	 */
-	public void setId(int id) {
-		this.id = id;
-	}
 
 	/**
 	 * @return the userName
@@ -69,15 +54,14 @@ public class UserDetails implements Serializable{
 		this.role = role;
 	}
 
-	public UserDetails(int id, String userName, String password, String role) {
+	public UserDTO(String userName, String password, String role) {
 		super();
-		this.id = id;
 		this.userName = userName;
 		this.password = password;
 		this.role = role;
 	}
 
-	public UserDetails() {
+	public UserDTO() {
 
 	}
 }

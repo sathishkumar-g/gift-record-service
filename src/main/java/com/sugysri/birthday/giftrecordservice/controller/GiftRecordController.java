@@ -16,7 +16,7 @@ import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
 
 @RestController
 @RequestMapping("/giftRecord")
-@CrossOrigin(origins = "*", allowedHeaders = "*")
+@CrossOrigin
 public class GiftRecordController {
 	@Autowired
 	private GiftRecordService giftRecordService;

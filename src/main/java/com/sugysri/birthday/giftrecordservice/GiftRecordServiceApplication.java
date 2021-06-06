@@ -8,6 +8,8 @@ import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.context.annotation.Bean;
 import org.springframework.web.client.RestTemplate;
 
+import com.sugysri.birthday.giftrecordservice.models.ServiceConstants;
+
 @SpringBootApplication()
 //@EnableEurekaClient
 //@EnableCaching
@@ -20,6 +22,11 @@ public class GiftRecordServiceApplication {
 	//@LoadBalanced
 	public RestTemplate getRestTemplate(RestTemplateBuilder restTemplateBuilder) {
 		return restTemplateBuilder.setReadTimeout(Duration.ofSeconds(30)).build();
+	}
+	
+	@Bean
+	public ServiceConstants getServiceConstants() {
+		return new ServiceConstants();
 	}
 
 }
